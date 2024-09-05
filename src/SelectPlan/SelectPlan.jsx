@@ -1,15 +1,15 @@
-import styles from "./YourInfo.module.css";
+import styles from "./SelectPlan.module.css";
 import SideBar from "../SideBar/SideBar.jsx";
 
-function YourInfo(){
-  return (
+function SelectPlan(){
+  return(
     <div className="container">
       <SideBar/>
       <div>
-        Personal Information.
+        select your plan
       </div>
     </div>
   );
 }
 
-export default YourInfo
+export default SelectPlan

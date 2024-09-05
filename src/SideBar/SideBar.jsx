@@ -1,10 +1,14 @@
-import styles from "./YourInfo.module.css";
-import PersonalInfo from "./PersonalInfo.jsx"
+import styles from "./SideBar.module.css";
+import YourInfo from "../YourInfo/YourInfo.jsx";
+import SelectPlan from "../SelectPlan/SelectPlan.jsx";
+import Addons from "../Addons/Addons.jsx";
+import Summery from "../Addons/Addons.jsx";
+
 
 function SideBar(){
   return (
     <div className={styles.sidebar}>
-      <a className={styles.section} href={<PersonalInfo/>}>
+      <a className={styles.section} href={<YourInfo/>}>
         <div className={styles.circle}>
           1
         </div>
@@ -15,7 +19,7 @@ function SideBar(){
           YOUR INFO
         </span>
       </a>
-      <a className={styles.section} href="#">
+      <a className={styles.section} href={<SelectPlan/>}>
         <div className={styles.circle}>
           2
         </div>
@@ -26,7 +30,7 @@ function SideBar(){
           SELECT PLAN
         </span>
       </a>
-      <a className={styles.section} href="#">
+      <a className={styles.section} href={<Addons/>}>
         <div className={styles.circle}>
           3
         </div>
@@ -37,7 +41,7 @@ function SideBar(){
           ADD-ONS
         </span>
       </a>
-      <a className={styles.section} href="#">
+      <a className={styles.section} href={<Summery/>}>
         <div className={styles.circle}>
           4
         </div>

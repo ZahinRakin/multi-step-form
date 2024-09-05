@@ -33,3 +33,16 @@ a {
   color: white;
   text-decoration: none;
 }
+
+.container {
+  background-color: hsl(231, 100%, 99%);
+  /* background-color: hsl(0, 0%, 100%); */
+  display: grid;
+  grid-template-columns: auto auto;
+  place-self: center;
+
+  width: 59rem;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 1.5rem;
+}
