@@ -23,6 +23,11 @@
   place-content: center;
 }
 
+.section-active {
+  background-color: hsl(206, 94%, 87%);
+  color: black;
+}
+
 .section {
   display: grid;
   grid-template-columns: 4rem auto;
@@ -31,11 +36,6 @@
   outline: none;
 }
 
-.section-active {
-  background-color: hsl(206, 94%, 87%);
-  color: black;
-
-}
 
 .section div {
   grid-row: 1 / span 2;
