@@ -28,9 +28,10 @@
   grid-template-columns: 4rem auto;
   font-size: 1rem;
   margin-top: 2rem;
+  outline: none;
 }
 
-.section:focus .circle {
+.section-active {
   background-color: hsl(206, 94%, 87%);
   color: black;
 

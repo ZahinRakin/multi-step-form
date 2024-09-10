@@ -1,14 +1,21 @@
 import styles from "./SideBar.module.css";
-import YourInfo from "../YourInfo/YourInfo.jsx";
-import SelectPlan from "../SelectPlan/SelectPlan.jsx";
-import Addons from "../Addons/Addons.jsx";
-import Summery from "../Addons/Addons.jsx";
+import { Link } from "react-router-dom";
+import { useRef, useEffect } from "react";
 
+function SideBar() {
+  const focusedOn = useRef(1);
 
-function SideBar(){
+  useEffect(() => {
+    // Select the element with class section-X and focus on it
+    const focusedElement = document.querySelector(`.section-${focusedOn.current}`);
+    if (focusedElement) {
+      focusedElement.focus();
+    }
+  }, []);
+
   return (
     <div className={styles.sidebar}>
-      <a className={styles.section} href={<YourInfo/>}>
+      <Link to="/your-info" className={`${styles.section} section-1`} tabIndex="-1">
         <div className={styles.circle}>
           1
         </div>
@@ -18,8 +25,8 @@ function SideBar(){
         <span className={styles.title}>
           YOUR INFO
         </span>
-      </a>
-      <a className={styles.section} href={<SelectPlan/>}>
+      </Link>
+      <Link to="/select-plan" className={`${styles.section} section-2`} tabIndex="-1">
         <div className={styles.circle}>
           2
         </div>
@@ -29,8 +36,8 @@ function SideBar(){
         <span className={styles.title}>
           SELECT PLAN
         </span>
-      </a>
-      <a className={styles.section} href={<Addons/>}>
+      </Link>
+      <Link to="/add-ons" className={`${styles.section} section-3`} tabIndex="-1">
         <div className={styles.circle}>
           3
         </div>
@@ -40,8 +47,8 @@ function SideBar(){
         <span className={styles.title}>
           ADD-ONS
         </span>
-      </a>
-      <a className={styles.section} href={<Summery/>}>
+      </Link>
+      <Link to="/summary" className={`${styles.section} section-4`} tabIndex="-1">
         <div className={styles.circle}>
           4
         </div>
@@ -49,11 +56,11 @@ function SideBar(){
           STEP 4
         </span>
         <span className={styles.title}>
-          SUMMERY
+          SUMMARY
         </span>
-      </a>
+      </Link>
     </div>
   );
 }
 
-export default SideBar
+export default SideBar;

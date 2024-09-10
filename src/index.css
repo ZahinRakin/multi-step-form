@@ -38,7 +38,8 @@ a {
   background-color: hsl(231, 100%, 99%);
   /* background-color: hsl(0, 0%, 100%); */
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 18rem auto;
+  gap: 4rem;
   place-self: center;
 
   width: 59rem;
