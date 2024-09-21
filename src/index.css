@@ -36,14 +36,36 @@ a {
 
 .container {
   background-color: hsl(231, 100%, 99%);
-  /* background-color: hsl(0, 0%, 100%); */
+  /* background-color: red; */
   display: grid;
   grid-template-columns: 18rem auto;
   gap: 4rem;
   place-self: center;
 
   width: 59rem;
-  border-radius: 15px;
+  border-radius: calc(15px + 1.5rem);
   box-sizing: border-box;
   padding: 1.5rem;
+
+  position: relative;
+}
+
+.next-step-button {
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  width: fit-content;
+}
+
+.buttons{
+  position: absolute;
+  bottom: 1.5rem;
+  width: calc(35.5rem - 24px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.go-back-button {
+  color: hsl(213, 96%, 18%);
 }
