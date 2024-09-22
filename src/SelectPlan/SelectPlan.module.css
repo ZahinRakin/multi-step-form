@@ -1,0 +1,24 @@
+.select-plan {
+  position: relative;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 2.5rem;
+  cursor: pointer;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.options > div {
+  border: 1px solid hsl(229, 24%, 87%);
+  padding: .7rem;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 80px auto auto;
+}
+
+.option-title {
+  font-style: bold;
+}

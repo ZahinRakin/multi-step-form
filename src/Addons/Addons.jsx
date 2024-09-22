@@ -1,5 +1,6 @@
 import styles from "./Addons.module.css";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Addons(){
   useEffect(() => {
@@ -9,9 +10,17 @@ function Addons(){
   }, []);
 
   return(
-    <div>
+    <form id="form-part-3" className={styles["add-ons"]}>
       add ons 
-    </div>
+      <div className="buttons">
+        <Link to="/select-plan" className="go-back-button">
+          Go Back
+        </Link>
+        <Link to="/summary" className="next-step-button">          
+          Next Step
+        </Link>
+      </div>
+    </form>
   );
 }
 

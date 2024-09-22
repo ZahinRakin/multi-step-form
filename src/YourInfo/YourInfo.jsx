@@ -17,7 +17,7 @@ function YourInfo(){
       <h1 className="title">
         Personal Info
       </h1>
-      <h5 className="sub-title">
+      <h5>
         Please provide your name, email address, and phone number.
       </h5>
       <div className="name">

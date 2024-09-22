@@ -46,15 +46,15 @@ a {
   border-radius: calc(15px + 1.5rem);
   box-sizing: border-box;
   padding: 1.5rem;
-
-  position: relative;
 }
 
 
 .buttons{
   position: absolute;
-  bottom: 1.5rem;
+  /* bottom: 1.5rem; */
+  bottom: 0;
   width: calc(32.5rem - 24px);
+  height: 3.3rem;
   display: grid;
   grid-template-areas:
   'go-back next-step'
@@ -64,19 +64,36 @@ a {
 
 .go-back-button {
   grid-area: go-back;
+  /* color: hsl(213, 96%, 18%); */
+  color: hsl(229, 24%, 87%);
+}
+
+.go-back-button:hover {
   color: hsl(213, 96%, 18%);
 }
 
 .next-step-button {
+  border: none;
   grid-area: next-step;
   justify-self:right ;
   background-color: hsl(213, 96%, 18%);
   color: white;
   padding: 1rem 1.5rem;
   border-radius: 15px;
+  font-size: 1rem;
+}
+
+.next-step-button:hover {
+  background-color: hsl(228, 100%, 84%);
 }
 
 .section-active {
   background-color: hsl(206, 94%, 87%);
   color: black;
+}
+
+
+h5 {
+  margin-top: 15px;
+  margin-bottom: 25px;
 }

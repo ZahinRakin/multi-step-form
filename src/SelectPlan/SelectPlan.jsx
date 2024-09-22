@@ -17,40 +17,40 @@ function SelectPlan(){
   }, []);
 
   return(
-    <form action="#" method="GET">
+    <form action="#" method="GET" className={styles[`select-plan`]}>
       <h1 className="title">
         Select your plan
       </h1>
       <span className="short-message">
         You have the option of monthly or yearly billing.
       </span>
-      <div className="options">
+      <div className={styles["options"]}>
         <div className="arcade">
-          <img src={arcadeIcon} alt="arcade image"/> {/*why this src isnt'working */}
-          <div className="option-title">
+          <img src={arcadeIcon} alt="arcade image"/>
+          <div className={styles["option-title"]}>
             Arcade
           </div>
-          <div className="price">
+          <div>
             $9/mo
           </div>
         </div>
 
         <div className="advanced">
           <img src={advancedIcon} alt="advanced image"/>
-          <div className="option-title">
+          <div>
             Advanced
           </div>
-          <div className="price">
+          <div>
             $12/mo
           </div>
         </div>
 
         <div className="pro">
           <img src={proIcon} alt="pro image"/>
-          <div className="option-title">
+          <div>
             Pro
           </div>
-          <div className="price">
+          <div>
             $15/mo
           </div>
         </div>

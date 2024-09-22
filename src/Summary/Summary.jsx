@@ -13,9 +13,17 @@ function Summary(){
   }, []);
 
   return(
-    <div>
+  <form id="form-part-4" className={styles["summary"]}>
       Summary
-    </div>
+      <div className="buttons">
+        <Link to="/add-ons" className="go-back-button">
+          Go Back
+        </Link>
+        <button type="submit" className="next-step-button">          
+          submit
+        </button>
+      </div>
+    </form>
   );
 }
 

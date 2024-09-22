@@ -22,7 +22,7 @@ The designs were created to the following widths:
 ### Neutral
 
 - Cool gray: hsl(231, 11%, 63%) //this is dark gray.
-- Light gray: hsl(229, 24%, 87%) //some font color
+- Light gray: hsl(229, 24%, 87%) //some font color //this is too light
 - Magnolia: hsl(217, 100%, 97%) //this is the background-color.
 - Alabaster: hsl(231, 100%, 99%) // very close to white.
 - White: hsl(0, 0%, 100%) //container color.

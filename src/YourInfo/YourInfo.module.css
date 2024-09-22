@@ -7,14 +7,20 @@
     border: 1px solid hsl(229, 24%, 87%);
     padding: 1rem;
     border-radius: 8px;
-    margin: 5px 0 20px 0;
+    margin: 5px 0 30px 0;
     width: calc(100% - 5rem);
+    color: hsl(213, 96%, 18%);
+    font-size: 1rem;
   }
   input:hover {
     border: 1px solid hsl(213, 96%, 18%);
   }
   input::placeholder {
-    color: hsl(213, 96%, 18%);
+    color: hsl(229, 24%, 87%);
     font-size: 1rem;
   }
+}
+
+form h5:first-of-type{
+  color: hsl(229, 24%, 87%);
 }
