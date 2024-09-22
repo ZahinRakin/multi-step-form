@@ -1,9 +1,19 @@
 import { Link } from "react-router-dom";
 import styles from "./YourInfo.module.css";
+import { useEffect } from 'react';
 
 function YourInfo(){
+  useEffect(()=>{
+    document.querySelectorAll('.section-active')
+      .forEach(elem => {
+        elem.classList.remove('section-active');
+      });
+    document.querySelector(".section-1-circle")
+      .classList.add("section-active");
+  }, []);
+
   return (
-    <form className={styles[`personal-info`]} id="form-part-1">
+    <form className={styles[`personal-info`]}>
       <h1 className="title">
         Personal Info
       </h1>
@@ -23,11 +33,12 @@ function YourInfo(){
       </div>
       <input type="number" className="phone-input" placeholder="e.g.+1 234 567 890"/>
       <div className="buttons">
-        <button className="next-step-button">
-          <Link to="/select-plan">
-            Next Step
-          </Link>
-        </button>
+        <div>
+
+        </div>
+        <Link to="/select-plan" className="next-step-button">
+          Next Step
+        </Link>
       </div>
     </form>
   );

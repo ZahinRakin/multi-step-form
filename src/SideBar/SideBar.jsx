@@ -1,12 +1,10 @@
 import styles from "./SideBar.module.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 function SideBar() {
- 
   return (
     <div className={styles.sidebar}>
-      <Link to="/your-info" className={`${styles.section} section-1`} onClick={() => changeFocus(1)}>
+      <Link to="/your-info" className={`${styles.section} section-1`}>
         <div className={`${styles.circle} section-1-circle`}>
           1
         </div>
@@ -17,7 +15,7 @@ function SideBar() {
           YOUR INFO
         </span>
       </Link>
-      <Link to="/select-plan" className={`${styles.section} section-2`} onClick={() => changeFocus(2)}>
+      <Link to="/select-plan" className={`${styles.section} section-2`}>
         <div className={`${styles.circle} section-2-circle`}>
           2
         </div>
@@ -28,7 +26,7 @@ function SideBar() {
           SELECT PLAN
         </span>
       </Link>
-      <Link to="/add-ons" className={`${styles.section} section-3`} onClick={() => changeFocus(3)}>
+      <Link to="/add-ons" className={`${styles.section} section-3`}>
         <div className={`${styles.circle} section-3-circle`}>
           3
         </div>
@@ -39,7 +37,7 @@ function SideBar() {
           ADD-ONS
         </span>
       </Link>
-      <Link to="/summary" className={`${styles.section} section-4`} onClick={() => changeFocus(4)}>
+      <Link to="/summary" className={`${styles.section} section-4`}>
         <div className={`${styles.circle} section-4-circle`}>
           4
         </div>

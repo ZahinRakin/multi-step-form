@@ -50,22 +50,33 @@ a {
   position: relative;
 }
 
-.next-step-button {
-  background-color: hsl(213, 96%, 18%);
-  color: white;
-  padding: 1rem 1.5rem;
-  border-radius: 15px;
-  width: fit-content;
-}
 
 .buttons{
   position: absolute;
   bottom: 1.5rem;
-  width: calc(35.5rem - 24px);
-  display: flex;
-  justify-content: space-between;
+  width: calc(32.5rem - 24px);
+  display: grid;
+  grid-template-areas:
+  'go-back next-step'
+  ;
+  align-items: center;
 }
 
 .go-back-button {
+  grid-area: go-back;
   color: hsl(213, 96%, 18%);
+}
+
+.next-step-button {
+  grid-area: next-step;
+  justify-self:right ;
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+}
+
+.section-active {
+  background-color: hsl(206, 94%, 87%);
+  color: black;
 }
