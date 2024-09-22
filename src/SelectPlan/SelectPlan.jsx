@@ -62,13 +62,21 @@ function SelectPlan(){
                       onClick={() => {
                         const outerElem = document.querySelector(`.${styles[`outer-border`]}`).classList;
                         const circleElem = document.querySelector(`.${styles[`circle`]}`).classList;
+                        const monthlyElem = document.querySelector(`.${styles[`monthly`]}`);
+                        const yearlyElem = document.querySelector(`.${styles[`yearly`]}`);
 
                         if(outerElem.contains(styles["clicked-outer-border"])){
                           outerElem.remove(styles["clicked-outer-border"]);
                           circleElem.remove(styles["clicked-circle"]);
+
+                          monthlyElem.style.color="hsl(213, 96%, 18%)";
+                          yearlyElem.style.color="hsl(229, 24%, 87%)";
                         } else {
                           outerElem.add(styles["clicked-outer-border"]);
                           circleElem.add(styles["clicked-circle"]);
+
+                          yearlyElem.style.color="hsl(213, 96%, 18%)";
+                          monthlyElem.style.color="hsl(229, 24%, 87%)";
                         }
                       }}>
           <div className={`${styles[`circle`]} `}>

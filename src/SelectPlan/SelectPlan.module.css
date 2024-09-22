@@ -75,6 +75,7 @@
 .monthly {
   grid-area: monthly;
   text-align: right;
+  transition: color 1s;
 }
 
 .outer-border {
@@ -83,4 +84,6 @@
 
 .yearly {
   grid-area: yearly;
+  color: hsl(229, 24%, 87%);
+  transition: color 1s;
 }
