@@ -9,7 +9,6 @@ function SelectPlan(){
   useEffect(()=>{
     document.querySelectorAll('.section-active')
       .forEach(elem => {
-        console.log(elem);
         elem.classList.remove('section-active');
       });
     document.querySelector(".section-2-circle")
@@ -21,11 +20,11 @@ function SelectPlan(){
       <h1 className="title">
         Select your plan
       </h1>
-      <span className="short-message">
+      <h5>
         You have the option of monthly or yearly billing.
-      </span>
+      </h5>
       <div className={styles["options"]}>
-        <div className="arcade">
+        <div className={styles.arcade}>
           <img src={arcadeIcon} alt="arcade image"/>
           <div className={styles["option-title"]}>
             Arcade
@@ -37,7 +36,7 @@ function SelectPlan(){
 
         <div className="advanced">
           <img src={advancedIcon} alt="advanced image"/>
-          <div>
+          <div className={styles["option-title"]}>
             Advanced
           </div>
           <div>
@@ -47,7 +46,7 @@ function SelectPlan(){
 
         <div className="pro">
           <img src={proIcon} alt="pro image"/>
-          <div>
+          <div className={styles["option-title"]}>
             Pro
           </div>
           <div>
@@ -55,10 +54,30 @@ function SelectPlan(){
           </div>
         </div>
       </div>
-      <div className="monthly-yearly">
-        <span>Monthly</span>
-        {/* here I have to insert a toggle */}
-        <span>Yearly</span>
+      <div className={styles["toggle-container"]}>
+        <span className={styles.monthly}>
+          Monthly
+        </span>
+        <div className={`${styles["outer-border"]}`} 
+                      onClick={() => {
+                        const outerElem = document.querySelector(`.${styles[`outer-border`]}`).classList;
+                        const circleElem = document.querySelector(`.${styles[`circle`]}`).classList;
+
+                        if(outerElem.contains(styles["clicked-outer-border"])){
+                          outerElem.remove(styles["clicked-outer-border"]);
+                          circleElem.remove(styles["clicked-circle"]);
+                        } else {
+                          outerElem.add(styles["clicked-outer-border"]);
+                          circleElem.add(styles["clicked-circle"]);
+                        }
+                      }}>
+          <div className={`${styles[`circle`]} `}>
+            {/*this is for creating a circle.*/}
+          </div>
+        </div>
+        <span className={styles.yearly}>
+          Yearly
+        </span>
       </div>
       <div className="buttons">
         <Link to="/your-info" className="go-back-button">

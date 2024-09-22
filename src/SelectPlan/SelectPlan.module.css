@@ -3,22 +3,84 @@
 }
 
 .options {
+  width: calc(32.5rem - 24px);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 2.5rem;
+  margin-bottom: 3rem;
   cursor: pointer;
-  gap: 1rem;
+  gap: 1.5rem;
   box-sizing: border-box;
 }
 
 .options > div {
   border: 1px solid hsl(229, 24%, 87%);
-  padding: .7rem;
+  padding: 1rem;
   border-radius: 10px;
   display: grid;
-  grid-template-rows: 80px auto auto;
+  grid-template-rows: 100px auto auto;
+  transition: border-color .15s; /*why this line isn't working*/
+}
+
+.options > div:hover {
+  border-color: hsl(213, 96%, 18%);
 }
 
 .option-title {
-  font-style: bold;
+  font-weight: bold;
+}
+
+.outer-border {
+  height: 1rem;
+  width: 2rem;
+  border-radius: 30px;
+  
+  border: 1px solid hsl(213, 96%, 18%);
+  background-color: hsl(213, 96%, 18%);
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+.clicked-outer-border {
+  background-color: white;
+  justify-content: right;
+}
+
+.circle {
+  background-color: white;
+  height: 1rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+
+  transition: transform 1s, background-color 1s;
+}
+
+
+.clicked-circle {
+  background-color: hsl(213, 96%, 18%);
+  transform: translateX(1rem);
+}
+
+.toggle-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  grid-template-areas:
+    'monthly toggle yearly'
+  ;
+  align-items: center;
+  width: calc(32.5rem - 24px);
+}
+
+.monthly {
+  grid-area: monthly;
+  text-align: right;
+}
+
+.outer-border {
+  grid-area: toggle;
+}
+
+.yearly {
+  grid-area: yearly;
 }
