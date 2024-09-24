@@ -78,9 +78,11 @@ a {
   justify-self:right ;
   background-color: hsl(213, 96%, 18%);
   color: white;
-  padding: 1rem 1.5rem;
-  border-radius: 15px;
+  padding: 1rem 0;
+  border-radius: 10px;
   font-size: 1rem;
+  width: 7rem;
+  text-align: center;
 }
 
 .next-step-button:hover {

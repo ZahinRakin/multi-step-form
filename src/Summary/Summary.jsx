@@ -20,7 +20,7 @@ function Summary(){
           Go Back
         </Link>
         <button type="submit" className="next-step-button">          
-          submit
+          Confirm
         </button>
       </div>
     </form>

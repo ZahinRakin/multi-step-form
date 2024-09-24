@@ -13,7 +13,7 @@
   box-sizing: border-box;
 }
 
-.options > div {
+.pay-option {
   border: 1px solid hsl(229, 24%, 87%);
   padding: 1rem;
   border-radius: 10px;
@@ -86,4 +86,8 @@
   grid-area: yearly;
   color: hsl(229, 24%, 87%);
   transition: color 1s;
+}
+
+.changed-border {
+  border: 1px solid hsl(213, 96%, 18%);
 }

@@ -15,6 +15,13 @@ function SelectPlan(){
       .classList.add("section-active");
   }, []);
 
+  function changeBorder(e){
+    document.querySelectorAll(`.${styles[`changed-border`]}`)
+      .forEach(elem => elem.classList.remove(`${styles[`changed-border`]}`));
+    
+    e.currentTarget.classList.add(`${styles[`changed-border`]}`);
+  }
+
   return(
     <form action="#" method="GET" className={styles[`select-plan`]}>
       <h1 className="title">
@@ -24,7 +31,7 @@ function SelectPlan(){
         You have the option of monthly or yearly billing.
       </h5>
       <div className={styles["options"]}>
-        <div className={styles.arcade}>
+        <div className={styles[`pay-option`]} onClick={(e) => changeBorder(e)}>
           <img src={arcadeIcon} alt="arcade image"/>
           <div className={styles["option-title"]}>
             Arcade
@@ -34,7 +41,7 @@ function SelectPlan(){
           </div>
         </div>
 
-        <div className="advanced">
+        <div className={styles[`pay-option`]} onClick={(e) => changeBorder(e)}>
           <img src={advancedIcon} alt="advanced image"/>
           <div className={styles["option-title"]}>
             Advanced
@@ -44,7 +51,7 @@ function SelectPlan(){
           </div>
         </div>
 
-        <div className="pro">
+        <div className={styles[`pay-option`]} onClick={(e) => changeBorder(e)}>
           <img src={proIcon} alt="pro image"/>
           <div className={styles["option-title"]}>
             Pro
