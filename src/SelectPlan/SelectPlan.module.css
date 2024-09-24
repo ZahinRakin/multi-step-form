@@ -22,7 +22,7 @@
   transition: border-color .15s; /*why this line isn't working*/
 }
 
-.options > div:hover {
+.pay-option:hover {
   border-color: hsl(213, 96%, 18%);
 }
 
