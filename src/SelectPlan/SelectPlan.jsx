@@ -16,34 +16,12 @@ function SelectPlan(){
       .classList.add("section-active");
   }, []);
 
-  let paymentPeriod = 'monthly';
 
   function changeBorder(e){
     document.querySelectorAll(`.${styles[`changed-border`]}`)
       .forEach(elem => elem.classList.remove(`${styles[`changed-border`]}`));
     
     e.currentTarget.classList.add(`${styles[`changed-border`]}`);
-  }
-
-  function handleToggle (){
-    const outerElem = document.querySelector(`.${styles[`outer-border`]}`).classList;
-    const circleElem = document.querySelector(`.${styles[`circle`]}`).classList;
-    const monthlyElem = document.querySelector(`.${styles[`monthly`]}`);
-    const yearlyElem = document.querySelector(`.${styles[`yearly`]}`);
-
-    if(outerElem.contains(styles["clicked-outer-border"])){
-      outerElem.remove(styles["clicked-outer-border"]);
-      circleElem.remove(styles["clicked-circle"]);
-
-      monthlyElem.style.color="hsl(213, 96%, 18%)";
-      yearlyElem.style.color="hsl(229, 24%, 87%)";
-    } else {
-      outerElem.add(styles["clicked-outer-border"]);
-      circleElem.add(styles["clicked-circle"]);
-
-      yearlyElem.style.color="hsl(213, 96%, 18%)";
-      monthlyElem.style.color="hsl(229, 24%, 87%)";
-    }
   }
 
   return(
@@ -60,8 +38,10 @@ function SelectPlan(){
           <div className={styles["option-title"]}>
             Arcade
           </div>
-          <div>
-            $9/mo
+          <div className="arcadePrice">
+            <span className="color-gray">
+              $9/mo
+            </span>
           </div>
         </div>
 
@@ -70,8 +50,10 @@ function SelectPlan(){
           <div className={styles["option-title"]}>
             Advanced
           </div>
-          <div>
-            $12/mo
+          <div className="advancedPrice">
+            <span className="color-gray">
+              $12/mo
+            </span>
           </div>
         </div>
 
@@ -80,20 +62,14 @@ function SelectPlan(){
           <div className={styles["option-title"]}>
             Pro
           </div>
-          <div>
-            $15/mo
+          <div className="proPrice">
+            <span className="color-gray">
+              $15/mo
+            </span>
           </div>
         </div>
       </div>
-      <div className={styles["toggle-container"]}>
-        <span className={styles.monthly}>
-          Monthly
-        </span>
-        <Toggle/>
-        <span className={styles.yearly}>
-          Yearly
-        </span>
-      </div>
+      <Toggle/>
       <div className="buttons">
         <Link to="/your-info" className="go-back-button">
           Go Back
