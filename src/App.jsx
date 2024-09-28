@@ -10,7 +10,6 @@ function App() {
   return (
     <div className="container">
       <SideBar/>
-
       <Routes>
         <Route path="/" element={<YourInfo/>}/>
         <Route path="/your-info" element={<YourInfo/>}/>

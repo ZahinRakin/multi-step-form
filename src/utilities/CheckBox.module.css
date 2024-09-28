@@ -1,0 +1,23 @@
+.container{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 10px;
+  align-items: center;
+}:hover{
+  border-color: hsl(213, 96%, 18%);
+}
+
+.selected {
+  border-color: hsl(213, 96%, 18%);
+}
+
+.checked-container{
+  border-color: hsl(213, 96%, 18%);
+}
+
+.bill {
+  color: hsl(206, 94%, 87%);
+}

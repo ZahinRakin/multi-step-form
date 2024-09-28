@@ -33,9 +33,9 @@ function SelectPlan(){
 
     if(state === 'monthly'){
       setBilling("monthly");
-      arcadeElem.innerHTML = `<span className="color-gray">$9/mo</span>`;
-      advancedElem.innerHTML = `<span className="color-gray">$12</span>`;
-      proElem.innerHTML = `<span className="color-gray">$15/mo</span>`;
+      arcadeElem.innerHTML = `<span class="color-gray">$9/mo</span>`;
+      advancedElem.innerHTML = `<span class="color-gray">$12</span>`;
+      proElem.innerHTML = `<span class="color-gray">$15/mo</span>`;
     } else {
       setBilling("yearly");
       arcadeElem.innerHTML = `
@@ -63,7 +63,7 @@ function SelectPlan(){
   }
 
   return(
-    <form action="#" method="GET" className={styles[`select-plan`]}>
+    <form action="#" method="GET" className={`${styles[`select-plan`]} main-element`}>
       <h1 className="title">
         Select your plan
       </h1>

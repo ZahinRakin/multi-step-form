@@ -3,7 +3,6 @@
 }
 
 .options {
-  width: calc(32.5rem - 24px);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 2.5rem;

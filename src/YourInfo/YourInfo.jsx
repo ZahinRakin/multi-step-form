@@ -13,7 +13,7 @@ function YourInfo(){
   }, []);
 
   return (
-    <form className={`${styles[`personal-info`]}`}>
+    <form className={`${styles[`personal-info`]} main-element`}>
       <h1 className="title">
         Personal Info
       </h1>
