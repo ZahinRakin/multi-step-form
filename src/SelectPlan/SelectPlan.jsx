@@ -1,6 +1,6 @@
 import styles from "./SelectPlan.module.css";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import arcadeIcon from "../assets/images/icon-arcade.svg";
 import advancedIcon from "../assets/images/icon-advanced.svg";
 import proIcon from "../assets/images/icon-pro.svg";
@@ -22,6 +22,44 @@ function SelectPlan(){
       .forEach(elem => elem.classList.remove(`${styles[`changed-border`]}`));
     
     e.currentTarget.classList.add(`${styles[`changed-border`]}`);
+  }
+
+  const [billing, setBilling] = useState("monthly");
+
+  function changePrice(state){
+    const arcadeElem = document.querySelector(`.arcadePrice`);
+    const advancedElem = document.querySelector(`.advancedPrice`);
+    const proElem = document.querySelector(`.proPrice`);
+
+    if(state === 'monthly'){
+      setBilling("monthly");
+      arcadeElem.innerHTML = `<span className="color-gray">$9/mo</span>`;
+      advancedElem.innerHTML = `<span className="color-gray">$12</span>`;
+      proElem.innerHTML = `<span className="color-gray">$15/mo</span>`;
+    } else {
+      setBilling("yearly");
+      arcadeElem.innerHTML = `
+        <span class="color-gray">
+          $90/yr
+        </span><br/>
+        <span class="color-blue">
+          2 months free
+        </span>`;
+      advancedElem.innerHTML = `
+        <span class="color-gray">
+          $120/yr
+        </span><br/>
+        <span class="color-blue">
+          2 months free
+        </span>`;
+      proElem.innerHTML = `
+        <span class="color-gray">
+          $150/yr
+        </span><br/>
+        <span class="color-blue">
+          2 months free
+        </span>`;
+    }
   }
 
   return(
@@ -69,7 +107,7 @@ function SelectPlan(){
           </div>
         </div>
       </div>
-      <Toggle/>
+      <Toggle changePrice={changePrice}/>    {/*here might be some syntax error. But I like it. */}
       <div className="buttons">
         <Link to="/your-info" className="go-back-button">
           Go Back

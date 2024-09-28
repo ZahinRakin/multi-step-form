@@ -1,15 +1,11 @@
 import styles from "./Toggle.module.css";
 
-function Toggle() {
+function Toggle(props) {
   function handleToggle (){
     const outerElem = document.querySelector(`.${styles[`outer-border`]}`).classList;
     const circleElem = document.querySelector(`.${styles[`circle`]}`).classList;
     const monthlyElem = document.querySelector(`.${styles[`monthly`]}`);
     const yearlyElem = document.querySelector(`.${styles[`yearly`]}`);
-
-    const arcadeElem = document.querySelector(`.arcadePrice`);
-    const advancedElem = document.querySelector(`.advancedPrice`);
-    const proElem = document.querySelector(`.proPrice`);
 
     if(outerElem.contains(styles["clicked-outer-border"])){ //monthly
       outerElem.remove(styles["clicked-outer-border"]);
@@ -18,9 +14,7 @@ function Toggle() {
       monthlyElem.style.color="hsl(213, 96%, 18%)";
       yearlyElem.style.color="hsl(229, 24%, 87%)";
 
-      arcadeElem.innerHTML = `<span className="color-gray">$9/mo</span>`;
-      advancedElem.innerHTML = `<span className="color-gray">$12</span>`;
-      proElem.innerHTML = `<span className="color-gray">$15/mo</span>`;
+      props.changePrice("monthly");
     } else {                                               //yearly
       outerElem.add(styles["clicked-outer-border"]);
       circleElem.add(styles["clicked-circle"]);
@@ -28,27 +22,7 @@ function Toggle() {
       yearlyElem.style.color="hsl(213, 96%, 18%)";
       monthlyElem.style.color="hsl(229, 24%, 87%)";
 
-      arcadeElem.innerHTML = `
-        <span class="color-gray">
-          $90/yr
-        </span><br/>
-        <span class="color-blue">
-          2 months free
-        </span>`;
-      advancedElem.innerHTML = `
-        <span class="color-gray">
-          $120/yr
-        </span><br/>
-        <span class="color-blue">
-          2 months free
-        </span>`;
-      proElem.innerHTML = `
-        <span class="color-gray">
-          $150/yr
-        </span><br/>
-        <span class="color-blue">
-          2 months free
-        </span>`;
+      props.changePrice("yearly");
     }
   }
 
