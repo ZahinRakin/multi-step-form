@@ -20,7 +20,6 @@ function CheckBox(props){
       <input
         type="checkbox" 
         value={props.id} 
-        checked
         onChange={() => markSelected(props.id)}/>
 
       <div className={styles[`sub-container`]}>
