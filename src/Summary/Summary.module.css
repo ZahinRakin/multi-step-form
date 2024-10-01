@@ -1,3 +1,61 @@
 .summary {
   position: relative;
 }
+
+
+.services {
+  background-color: rgba(236, 236, 236, 0.699);
+  padding: 1rem;
+  border-radius: 5px;
+  color: hsl(213, 96%, 18%);
+}
+
+.grid-template{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.grid-template .price-portion:last-child {
+  text-align: right;
+}
+
+.plan {
+  box-shadow: 0 1px rgba(0, 0, 0, 0.220);
+  padding-bottom: 1rem;
+  line-height: 1.5rem;
+
+  span{
+    font-weight: bold;
+  }
+}
+
+.change-button {
+  color: hsl(229, 24%, 87%);
+  text-decoration: underline;
+}
+
+.change-button:hover{
+  color: hsl(213, 96%, 18%);
+}
+
+.service-price {
+  font-weight: bold;
+}
+
+.add-ons{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem 0 0;
+}
+
+.total-bill {
+  padding: 1rem;
+}
+
+.total-price {
+  color: hsl(243, 100%, 62%);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
