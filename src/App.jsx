@@ -12,12 +12,12 @@ function App() {
     <div className="container">
       <SideBar/>
       <Routes>
-        <Route path="/" element={<Navigate to="/your-info" />}/>
-        <Route path="/your-info" element={<YourInfo/>}/>
-        <Route path="/select-plan" element={<SelectPlan/>}/>
-        <Route path="/add-ons" element={<Addons/>}/>
-        <Route path="/summary" element={<Summary/>}/>
-        <Route path="/thankyou" element={<ThankYou/>}/>
+        <Route path="/multi-step-form/" element={<Navigate to="/multi-step-form/your-info" />}/>
+        <Route path="/multi-step-form/multi-step-form/your-info" element={<YourInfo/>}/>
+        <Route path="/multi-step-form/select-plan" element={<SelectPlan/>}/>
+        <Route path="/multi-step-form/add-ons" element={<Addons/>}/>
+        <Route path="/multi-step-form/summary" element={<Summary/>}/>
+        <Route path="/multi-step-form/thankyou" element={<ThankYou/>}/>
       </Routes>
     </div>
   )
