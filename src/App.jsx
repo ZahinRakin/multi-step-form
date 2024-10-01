@@ -4,6 +4,7 @@ import SelectPlan from "./SelectPlan/SelectPlan.jsx";
 import Addons from "./Addons/Addons.jsx";
 import Summary from "./Summary/Summary.jsx";
 import SideBar from "./SideBar/SideBar.jsx";
+import ThankYou from "./ThankYou/ThankYou.jsx";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/select-plan" element={<SelectPlan/>}/>
         <Route path="/add-ons" element={<Addons/>}/>
         <Route path="/summary" element={<Summary/>}/>
+        <Route path="/thankyou" element={<ThankYou/>}/>
       </Routes>
     </div>
   )

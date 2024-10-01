@@ -70,9 +70,11 @@ function Summary(){
         <Link to="/add-ons" className="go-back-button">
           Go Back
         </Link>
-        <button type="submit" className="next-step-button">          
-          Confirm
-        </button>
+        <Link to="/thankyou" className="next-step-button">
+          <button type="submit" >          
+            Confirm
+          </button>
+        </Link>
       </div>
     </form>
   );
