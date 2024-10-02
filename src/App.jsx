@@ -12,7 +12,7 @@ function App() {
     <div className="container">
       <SideBar/>
       <Routes>
-        <Route path="/" element={<Navigate to="/your-info" />}/>
+        <Route exact path="/multi-step-form" element={<Navigate to="/your-info" />}/>
         <Route path="/your-info" element={<YourInfo/>}/>
         <Route path="/select-plan" element={<SelectPlan/>}/>
         <Route path="/add-ons" element={<Addons/>}/>
