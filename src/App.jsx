@@ -5,6 +5,8 @@ import Addons from "./Addons/Addons.jsx";
 import Summary from "./Summary/Summary.jsx";
 import SideBar from "./SideBar/SideBar.jsx";
 import ThankYou from "./ThankYou/ThankYou.jsx";
+import { Navigate } from "react-router-dom";
+
 
 function App() {
 
@@ -12,7 +14,7 @@ function App() {
     <div className="container">
       <SideBar/>
       <Routes>
-        <Route exact path="/multi-step-form" element={<your-info />}/>
+        <Route exact path="/multi-step-form" element={<Navigate to="/multi-step-form/your-info" />}/>
         <Route path="/your-info" element={<YourInfo/>}/>
         <Route path="/select-plan" element={<SelectPlan/>}/>
         <Route path="/add-ons" element={<Addons/>}/>
