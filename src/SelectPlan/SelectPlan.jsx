@@ -109,7 +109,7 @@ function SelectPlan(){
       </div>
       <Toggle changePrice={changePrice}/>    {/*here might be some syntax error. But I like it. */}
       <div className="buttons">
-        <Link to="/your-info" className="go-back-button">
+        <Link to="/" className="go-back-button">
           Go Back
         </Link>
         <Link to="/add-ons" className="next-step-button">          

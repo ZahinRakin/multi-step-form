@@ -14,8 +14,8 @@ function App() {
     <div className="container">
       <SideBar/>
       <Routes>
-        <Route exact path="/multi-step-form" element={<Navigate to="/your-info" />}/> {/**why this line doesn't produce expected result. I want /multi-step-form and /multi-step-form/your-info both to direct to the same webpage */}
-        <Route path="/your-info" element={<YourInfo/>}/>
+        <Route exact path="/" element={<YourInfo />}/> {/**why this line doesn't produce expected result. I want /multi-step-form and /multi-step-form/your-info both to direct to the same webpage */}
+        {/* <Route path="/your-info" element={<YourInfo/>}/> this line refuses to work always */}
         <Route path="/select-plan" element={<SelectPlan/>}/>
         <Route path="/add-ons" element={<Addons/>}/>
         <Route path="/summary" element={<Summary/>}/>
