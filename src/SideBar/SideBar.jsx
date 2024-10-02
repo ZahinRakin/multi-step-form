@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function SideBar() {
   return (
     <div className={styles.sidebar}>
-      <Link to="/your-info" className={`${styles.section} section-1`}>
+      <Link to="/" className={`${styles.section} section-1`}>
         <div className={`${styles.circle} section-1-circle`}>
           1
         </div>
